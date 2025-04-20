@@ -1,7 +1,7 @@
 
 import { FaBookmark } from "react-icons/fa";
 
-const Blog = ({blog,handleMark}) => {
+const Blog = ({blog,handleMark,handleReadCount}) => {
 
     return (
         <div className="mt-4">
@@ -26,7 +26,7 @@ const Blog = ({blog,handleMark}) => {
     </div>
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
     <div className="card-actions justify-end">
-      <button className="btn btn-primary">Mark as read</button>
+      <button onClick={()=>handleReadCount(blog.rating_time, blog.id)} className="btn btn-primary">Mark as read</button>
     </div>
   </div>
 </div>
